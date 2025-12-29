@@ -42,9 +42,4 @@ The project focuses on **network fundamentals** such as TCP full-duplex communic
 ### 1 Start the server
 
 ```bash
-python messageserver.py```
-
-### 2 Start the client
-
-```bash
-python clientserver.py
+python messageserver.py
