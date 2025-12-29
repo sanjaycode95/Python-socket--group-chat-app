@@ -33,8 +33,8 @@ The project focuses on **network fundamentals** such as TCP full-duplex communic
 - Each client connection runs independently.
 - When a client sends a message, the server **broadcasts** it to all connected clients.
 - TCP provides reliable, ordered, full-duplex communication.Note: TCP natively supports full-duplex communication on a single connection.
-- This project uses separate ports to simplify input/output handling and
-- demonstrate independent data flow management.
+> This project uses separate ports to simplify input/output handling and  demonstrate independent data flow management.
+> Separate  port used in client side to avoide blocking input 
 ---
 
 ## Running the Application
