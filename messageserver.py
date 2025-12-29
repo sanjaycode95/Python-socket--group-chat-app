@@ -1,4 +1,10 @@
 import socket,threading
+import configparser
+config = configparser.ConfigParser()
+config.read("config.ini")
+_ip = config["server"]["host"]
+port = int(config["server"]["port"])
+no_of_client=int(config["server"]["max_clients"])
 payload=""
 indica="+"
 def reciver(con,addr):
@@ -51,8 +57,8 @@ def sender(con,addr):
                indica="+"
             payload=user_size+client_name+size+message
 s=socket.socket()
-s.bind(("0.0.0.0",5002))
-s.listen(100)
+s.bind((_ip,port))
+s.listen(no_of_client)
 while True:
     con,add=s.accept()
     b=con.recv(1).decode()
